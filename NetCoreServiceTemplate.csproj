@@ -5,13 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\swagger\custom.css" />
+    <Content Remove="wwwroot\docs\docs.css" />
+    <Content Remove="wwwroot\docs\logo.svg" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\swagger\custom.css">
+    <None Include="wwwroot\docs\docs.css">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
+    <None Include="wwwroot\docs\logo.svg" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,9 +1,8 @@
 ﻿@charset "UTF-8";
 
 .swagger-ui img {
-    height: 60px;
-    content: url("data:image/svg+xml;base64,PHN2z4=");
-    filter: invert(1);
+    height: 40px;
+    content: url("/docs/logo.svg");
 }
 
 .swagger-ui html {

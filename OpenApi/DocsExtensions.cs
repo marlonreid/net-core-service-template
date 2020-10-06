@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using NetCoreServiceTemplate.OpenApi;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -33,12 +32,13 @@ namespace NetCoreServiceTemplate.OpenApi
             applicationBuilder.UseSwaggerUI(
                 options =>
                 {
+                    options.DocumentTitle = "Swagger UI";
                     // build a swagger endpoint for each discovered API version
                     foreach (var description in provider.ApiVersionDescriptions)
                     {
                         options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
                     }
-                    options.InjectStylesheet("/swagger/custom.css");
+                    options.InjectStylesheet("/docs/docs.css");
                 });
 
             return applicationBuilder;
